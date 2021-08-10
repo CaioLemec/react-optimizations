@@ -7,7 +7,7 @@ module.exports = () => {
         data.products.push({
             id: i + 1,
             price: Math.random(),
-            title: `Produto ${i+1}`
+            title: `Product ${i+1}`
         })
     }
 

@@ -8,7 +8,6 @@ interface SearchResultsProps {
     }>
 }
 
-
 export function SearchResults({results}: SearchResultsProps) {
     return (
         <div>

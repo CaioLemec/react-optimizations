@@ -7,28 +7,25 @@ export default function Home() {
 
   async function handleSearch(event: FormEvent) {
     event.preventDefault();
-    
     if (!search.trim()) {
       return;
     }
-
     const response = await fetch(`http://localhost:3333/products?q=${search}`)
     const data = await response.json();
     setResults(data);
   }
-
   return (
     <div>
       <h1>Search</h1>
       <form onSubmit={handleSearch}>
-        <input 
-          type="text" 
+        <input
+          type="text"
           value={search}
-          onChange= { e => setSearch(e.target.value) } 
+          onChange={e => setSearch(e.target.value)}
         />
         <button type="submit">Search</button>
       </form>
-      <SearchResults results={results}/>
+      <SearchResults results={results} />
     </div>
   )
 }
