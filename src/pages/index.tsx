@@ -1,8 +1,16 @@
-import { FormEvent, useState } from "react"
+import { FormEvent, useState, useCallback } from "react"
 import { SearchResults } from "../components/SearchResults";
 
+interface SearchResultsProps {
+  results: Array<{
+    id: number;
+    price: number;
+    title: string;
+  }>
+}
+
 export default function Home() {
-  const [search, setSearch] = useState();
+  const [search, setSearch] = useState('');
   const [results, setResults] = useState([]);
 
   async function handleSearch(event: FormEvent) {
@@ -14,6 +22,11 @@ export default function Home() {
     const data = await response.json();
     setResults(data);
   }
+
+  const addToWishList = useCallback( async (id: number) => {
+    console.log(id);
+  }, [])
+
   return (
     <div>
       <h1>Search</h1>
@@ -25,7 +38,10 @@ export default function Home() {
         />
         <button type="submit">Search</button>
       </form>
-      <SearchResults results={results} />
+      <SearchResults 
+        results={results} 
+        onAddToWishList={addToWishList}
+      />
     </div>
   )
 }
