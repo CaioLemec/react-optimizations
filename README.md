@@ -1,5 +1,5 @@
 <p align="center">
- <img alt="mockup" src="./public/mockup.png" width="auto">
+ <img alt="example gif" src="./public/exemple.gif" width="auto">
 </p>
 <hr>
 
