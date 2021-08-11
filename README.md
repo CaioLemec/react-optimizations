@@ -5,15 +5,17 @@
 
 ## :desktop_computer: Project
 
-A common concern in web application development is <strong>performance</strong>, and because of that I created this application to delve into the tactics used to improve performance in the Next.js and React universe. I was able to learn a lot about:
+A common concern in web application development is <strong>performance</strong>, and because of that, I created this application to delve into the tactics used to improve performance in the Next.js and React universe. I was able to learn a lot about:
 
-ReactDevTools,
-Memo,
-useMemo,
-useCallback,
-Dynamic Import (Code Splitting),
-Data formatting,
-Bundle analyzer,
+This webApp was created in [@Rocketseat](https://app.rocketseat.com.br/) Ignite's challenges course.
+
+- ReactDevTools, <br>
+- Memo, <br>
+- useMemo, <br>
+- useCallback, <br>
+- Dynamic Import (Code Splitting), <br>
+- Data formatting, <br>
+- Bundle analyzer, <br>
 and much more...
 
 
