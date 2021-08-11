@@ -1,5 +1,6 @@
 import { ProductItem } from "./ProductItem";
 import { List, ListRowRenderer } from 'react-virtualized';
+import styles from './search.module.scss'
 
 interface SearchResultsProps {
     totalPrice: number;
@@ -24,13 +25,18 @@ export function SearchResults({totalPrice, results, onAddToWishList}: SearchResu
         );
     }
 
+    const formatter = new Intl.NumberFormat('de-DE', {
+        style: 'currency',
+        currency: 'EUR'
+      })
+
     return (
-        <div>
-            <h2>{totalPrice}</h2>
+        <div className={styles.contentContainer}>
+            <h2>Amount {formatter.format(totalPrice)}</h2>
             <List 
-                height={300}
-                rowHeight={30}
-                width={900}
+                height={400}
+                rowHeight={40}
+                width={650}
                 overscanRowCount={5}
                 rowCount={results.length}
                 rowRenderer={rowRenderer}

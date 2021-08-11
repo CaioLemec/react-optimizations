@@ -1,6 +1,7 @@
 import { memo, useState } from 'react';
 import { AddProductToWishListProps } from './AddProductToWishList';
 import dynamic from 'next/dynamic';
+import styles from './item.module.scss'
 
 const AddProductToWishList = dynamic<AddProductToWishListProps>(()=> {
     return import('./AddProductToWishList').then(mod => mod.AddProductToWishList)
@@ -22,8 +23,8 @@ function ProductItemComponent ({product, onAddToWishList}: ProductItemsProps) {
     const [isAddingToWishList, setIsAddingToWishList] = useState(false);
 
     return (
-        <div>
-            {product.title} - <strong>{product.priceFormatted}</strong>
+        <div className={styles.contentContainer}>
+            {product.title} <strong>{product.priceFormatted}</strong>
             <button onClick={()=> setIsAddingToWishList(true)}>Add at yout favotires?</button>
             { isAddingToWishList && (
             <AddProductToWishList

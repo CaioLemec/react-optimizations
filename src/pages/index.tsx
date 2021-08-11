@@ -1,5 +1,6 @@
 import { FormEvent, useState, useCallback } from "react"
 import { SearchResults } from "../components/SearchResults";
+import styles from './home.module.scss'
 
 interface SearchResultsProps {
   results: Array<{
@@ -31,9 +32,9 @@ export default function Home() {
     const response = await fetch(`http://localhost:3333/products?q=${search}`)
     const data = await response.json();
 
-    const formatter = new Intl.NumberFormat('pt-BR', {
+    const formatter = new Intl.NumberFormat('de-DE', {
       style: 'currency',
-      currency: 'BRL'
+      currency: 'EUR'
     })
 
     const products = data.map(product => {
@@ -57,7 +58,7 @@ export default function Home() {
   }, [])
 
   return (
-    <div>
+    <div className={styles.contentContainer}>
       <h1>Search</h1>
       <form onSubmit={handleSearch}>
         <input

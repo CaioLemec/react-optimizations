@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main: #1D1D1F;
+    --text: #F5F5F7;
+    --highlight: #e5e423;
+}
+
+body {
+    background-color: var(--main);
+    color: var(--text);
+}
+
+
+body, input, textarea, select, button {
+    font: 400 1rem "Roboto", sans-serif;
+}

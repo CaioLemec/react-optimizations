@@ -1,3 +1,5 @@
+import styles from './wishList.module.scss'
+
 export interface AddProductToWishListProps {
     onAddToWishList: () => void;
     onRequestClose: () => void;
@@ -8,7 +10,7 @@ export function AddProductToWishList( {
     onRequestClose
 }:AddProductToWishListProps) {
     return(
-        <span>
+        <span className={styles.contentContainer}>
             Add to favorites?
             <button onClick={onAddToWishList}>Yes</button>
             <button onClick={onRequestClose}>No</button>
