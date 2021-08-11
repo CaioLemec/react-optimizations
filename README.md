@@ -16,7 +16,7 @@ This webApp was created in [@Rocketseat](https://app.rocketseat.com.br/) Ignite'
 - Dynamic Import (Code Splitting), <br>
 - Data formatting, <br>
 - Bundle analyzer, <br>
-and much more...
+- and much more...
 
 
 ## :technologist: Technologies
@@ -27,17 +27,12 @@ and much more...
 - [Bundle Analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer)
 - [React Virtualized](https://bvaughn.github.io/react-virtualized/#/components/List)
 
-<br>
-<hr>
-
 ## :octocat: Environment
 
 Keep in mind that the following installations will be needed:
 
 - [Code editor](https://code.visualstudio.com/)
 - [Git](https://git-scm.com/book/pt-br/v2/Come%C3%A7ando-Instalando-o-Git)
-- [ImgBB account](https://imgbb.com/)
-- [FaunaDB account](https://fauna.com/)
 
 Follow the instructions to run the application:
 
